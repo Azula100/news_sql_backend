@@ -7,9 +7,7 @@ const cookieParser = require('cookie-parser')
 const morgan = require('morgan')
 const connectDB = require('./config/db')
 
-if (process.env.NODE_ENV !== 'production') {
-  dotenv.config({ path: './config/config.env' })
-}
+dotenv.config({ path:'./config/config.env'})
 connectDB()
 
 const app = express()
